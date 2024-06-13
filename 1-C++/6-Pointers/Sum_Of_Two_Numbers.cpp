@@ -11,6 +11,6 @@ int main()
     cin>>x;
     cout<<"Enter the second nuumber : ";
     cin>>y;
-    cout<<"The sum of two numbers is : "<<sum(&x,&y);
+    cout<<"The sum of two numbers is : "<<sum(&x,&y)<<endl;
     return 0;
 }
