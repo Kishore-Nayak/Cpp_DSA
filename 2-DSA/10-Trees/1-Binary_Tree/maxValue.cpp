@@ -1,4 +1,5 @@
 #include<iostream>
+#include<climits>
 using namespace std;
 class Node{ //This is a Tree Node
 public:
@@ -17,6 +18,10 @@ void display(Node* root){
     display(root->left);
     display(root->right);
 }
+int maxValue(Node* root){
+    if(root==NULL) return INT_MIN;
+    return max(root->val , max(maxValue(root->left) , maxValue(root->right)));
+}
 int main(){
     Node* a = new Node(1);  //root node
     Node* b = new Node(2);
@@ -32,5 +37,6 @@ int main(){
     c->left = f;
     c->right = g;
     display(a);
+    cout<<endl<<maxValue(a)<<endl;
     return 0;
 }

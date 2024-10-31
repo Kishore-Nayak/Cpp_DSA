@@ -40,6 +40,10 @@
         "sstream": "cpp",
         "stdexcept": "cpp",
         "streambuf": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "queue": "cpp",
+        "kthlargestelement": "cpp",
+        "xstring": "cpp",
+        "stack": "cpp"
     }
 }

@@ -11,11 +11,14 @@ public:
         this->right=NULL;
     }
 };
-void display(Node* root){
+void printLevel(Node* root,int level,int x){
+    if(x==level){
+        cout<<root->val<<" ";
+        return;
+    }
     if(root==NULL) return;
-    cout<<root->val<<" ";
-    display(root->left);
-    display(root->right);
+    printLevel(root->left,level,x+1);
+    printLevel(root->right,level,x+1);
 }
 int main(){
     Node* a = new Node(1);  //root node
@@ -31,6 +34,11 @@ int main(){
     b->right = e;
     c->left = f;
     c->right = g;
-    display(a);
+    printLevel(a,1,1);
+    cout<<endl;
+    printLevel(a,2,1);
+    cout<<endl;
+    printLevel(a,3,1);
+    cout<<endl;
     return 0;
 }

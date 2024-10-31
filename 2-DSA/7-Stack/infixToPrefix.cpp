@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string>
 #include<stack>
 using namespace std;
 int priority(char ch){
